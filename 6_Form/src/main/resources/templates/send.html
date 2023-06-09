@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Message</title>
+</head>
+<body>
+<form th:action="@{/receive}" method="post">
+  <label for="message">Message:
+    <input type="text" id="message" name="message">
+  </label><br>
+  <input type="submit" value="Send Message">
+</form>
+</body>
+</html>

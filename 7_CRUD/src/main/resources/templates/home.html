@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <!--등록된 학생이 없을 떄 -->
+    <div th:if="${studentList.isEmpty()}">
+        <p> No Student Here ... </p>
+    </div>
+    <div th:unless="${studentList.isEmpty()}" th:each="student: ${studentList}">
+        <p>번호 : [[${student.id}]]</p>
+        <p>이름 : <a th:href="@{/{id}(id=${student.id})}">[[${student.name}]]</a></p>
+        <p>이메일 : [[${student.email}]]</p>
+    </div><hr>
+<a th:href="@{/create-view}">Create</a>
+</body>
+</html>

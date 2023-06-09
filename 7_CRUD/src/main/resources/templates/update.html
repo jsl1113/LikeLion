@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[[${student.name}]] - Update</title>
+</head>
+<body>
+<h1>Update: [[${student.id}]]. [[${student.name}]]</h1>
+<form th:action="@{/{id}/update(id=${student.id})}" method="post">
+  <label for="name">Name: <input id="name" name="name" th:value="${student.name}"></label><br>
+  <label for="email">Email: <input id="email" name="email" th:value="${student.email}"></label><br>
+  <input type="submit">
+</form>
+<a th:href="@{/{id}(id=${student.id})}">Back</a>
+</body>
+</html>

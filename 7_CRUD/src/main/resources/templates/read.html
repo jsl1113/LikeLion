@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[[${student.name}]]</title>
+</head>
+<body>
+<h1>[[${student.id}]]. [[${student.name}]]</h1>
+<p>이메일 : [[${student.email}]]</p>
+<a href="/home">Back</a>
+<a th:href="@{/{id}/update-view(id=${student.id})}">Edit</a>
+<a th:href="@{/{id}/delete-view(id=${student.id})}">Delete</a>
+</body>
+</html>
